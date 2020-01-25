@@ -36,7 +36,9 @@
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="16dp"
                 android:layout_marginEnd="50dp"
+                android:fontFamily="@font/righteous"
                 android:text="@={contact.firstName}"
+                android:textSize="@dimen/input_textSize"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/circleImageView"
                 app:layout_constraintTop_toTopOf="@+id/circleImageView"
@@ -47,7 +49,9 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="16dp"
+                android:fontFamily="@font/righteous"
                 android:text="@={contact.email}"
+                android:textSize="@dimen/input_textSize"
                 app:layout_constraintBottom_toBottomOf="@+id/circleImageView"
                 app:layout_constraintEnd_toEndOf="@+id/profileFirstNameId"
                 app:layout_constraintHorizontal_bias="0.0"
@@ -80,7 +84,7 @@
                 app:layout_constraintStart_toStartOf="@+id/capturedEditFirstNameId"
                 app:layout_constraintTop_toTopOf="@+id/divider" />
 
-            <EditText
+            <TextView
                 android:id="@+id/capturedEditFirstNameId"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -88,9 +92,11 @@
                 android:layout_marginTop="16dp"
                 android:layout_marginEnd="16dp"
                 android:ems="10"
-                android:text="@={contact.firstName}"
+                android:fontFamily="@font/righteous"
                 android:hint="@string/first_name"
                 android:inputType="textPersonName"
+                android:text="@={contact.firstName}"
+                android:textSize="@dimen/input_textSize"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
@@ -120,15 +126,17 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/capturedEditFirstNameId" />
 
-            <EditText
+            <TextView
                 android:id="@+id/receivedLastNameID"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:ems="10"
-                android:text="@={contact.lastName}"
+                android:fontFamily="@font/righteous"
                 android:hint="@string/last_name"
                 android:inputType="textPersonName"
+                android:text="@={contact.lastName}"
+                android:textSize="@dimen/input_textSize"
                 app:layout_constraintEnd_toEndOf="@+id/capturedLastNameTitleId"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="@+id/capturedLastNameTitleId"
@@ -151,7 +159,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="16dp"
                 android:layout_marginEnd="16dp"
                 android:text="@string/email"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -159,15 +167,17 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/receivedLastNameID" />
 
-            <EditText
+            <TextView
                 android:id="@+id/capturedEmailId"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:ems="10"
-                android:text="@={contact.email}"
+                android:fontFamily="@font/righteous"
                 android:hint="@string/email"
-                android:inputType="textPersonName"
+                android:inputType="textEmailAddress"
+                android:text="@={contact.email}"
+                android:textSize="@dimen/input_textSize"
                 app:layout_constraintEnd_toEndOf="@+id/captureTitleEmailId"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="@+id/captureTitleEmailId"
@@ -198,15 +208,17 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/divider5" />
 
-            <EditText
+            <TextView
                 android:id="@+id/capturedPhoneId"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
-                android:text="@={contact.phone}"
                 android:ems="10"
+                android:fontFamily="@font/righteous"
                 android:hint="@string/phone"
-                android:inputType="textPersonName"
+                android:inputType="phone"
+                android:text="@={contact.phone}"
+                android:textSize="@dimen/input_textSize"
                 app:layout_constraintEnd_toEndOf="@+id/phoneTitleId"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="@+id/phoneTitleId"
@@ -223,6 +235,43 @@
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/capturedPhoneId" />
+
+            <TextView
+                android:id="@+id/capturedAddressTitleId"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:text="@string/address"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/capturedPhoneId" />
+
+            <TextView
+                android:id="@+id/capturedAddressId"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/righteous"
+                android:text="@={contact.address}"
+                android:textSize="@dimen/input_textSize"
+                app:layout_constraintEnd_toEndOf="@+id/capturedAddressTitleId"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/capturedAddressTitleId"
+                app:layout_constraintTop_toBottomOf="@+id/capturedAddressTitleId" />
+
+            <View
+                android:id="@+id/divider3"
+                android:layout_width="0dp"
+                android:layout_height="4dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:background="@color/colorPrimary"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/capturedAddressId" />
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>
