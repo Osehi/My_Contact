@@ -17,7 +17,7 @@ interface ContactDao {
     suspend fun update(contact:Contact)
 
 
-    @Query("SELECT * FROM contact_table")
+    @Query("SELECT * FROM contact_table ORDER BY id DESC")
     fun getAllContact():LiveData<List<Contact>>
 
 }

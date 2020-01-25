@@ -1,5 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/nav_graph">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/contactList">
 
+    <fragment
+        android:id="@+id/contactList"
+        android:name="com.polish.mycontact.ui.ContactList"
+        android:label="Contact List"
+        tools:layout="@layout/fragment_contact_list">
+        <action
+            android:id="@+id/action_contactList_to_profile"
+            app:destination="@id/profile" />
+        <action
+            android:id="@+id/action_contactList_to_addContact"
+            app:destination="@id/addContact" />
+    </fragment>
+    <fragment
+        android:id="@+id/addContact"
+        android:name="com.polish.mycontact.ui.AddContact"
+        android:label="Add Contact"
+        tools:layout="@layout/fragment_add_contact" />
+    <fragment
+        android:id="@+id/profile"
+        android:name="com.polish.mycontact.ui.Profile"
+        android:label="Profile"
+        tools:layout="@layout/fragment_profile">
+        <argument
+            android:name="contact"
+            app:argType="com.polish.mycontact.model.Contact" />
+    </fragment>
 </navigation>
