@@ -14,4 +14,7 @@
     <string name="phone">Phone</string>
     <string name="address">Address</string>
     <string name="submit">Submit</string>
+    <string name="edit">Edit</string>
+    <string name="edit_title">Edit Profile</string>
+    <string name="update_button1">Update</string>
 </resources>

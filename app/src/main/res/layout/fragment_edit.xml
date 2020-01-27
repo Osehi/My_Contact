@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="contact"
+            type="com.polish.mycontact.model.Contact" />
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            tools:context=".ui.Edit">
+
+
+            <TextView
+                android:id="@+id/editProfileTitleId"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/domine_bold"
+                android:text="@string/edit_title"
+                android:textAlignment="center"
+                android:textSize="@dimen/heading_text"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/upFirstNameId"
+                android:background="@drawable/edit_platform"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:fontFamily="@font/righteous"
+                android:text="@={contact.firstName}"
+                android:hint="@string/first_name"
+                android:inputType="textPersonName"
+                android:textSize="@dimen/input_textSize"
+                app:layout_constraintBottom_toTopOf="@+id/updatLastNameId"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editProfileTitleId" />
+
+            <EditText
+                android:id="@+id/updatLastNameId"
+                android:background="@drawable/edit_platform"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@={contact.lastName}"
+                android:ems="10"
+                android:fontFamily="@font/righteous"
+                android:hint="@string/last_name"
+                android:inputType="textPersonName"
+                android:textSize="@dimen/input_textSize"
+                app:layout_constraintBottom_toTopOf="@+id/updateEmailId"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/upFirstNameId" />
+
+            <EditText
+                android:id="@+id/updateEmailId"
+                android:background="@drawable/edit_platform"
+                android:text="@={contact.email}"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:fontFamily="@font/righteous"
+                android:hint="@string/email"
+                android:inputType="textPersonName"
+                android:textSize="@dimen/input_textSize"
+                app:layout_constraintBottom_toTopOf="@+id/updatePhoneId"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/updatLastNameId" />
+
+            <EditText
+                android:id="@+id/updatePhoneId"
+                android:text="@={contact.phone}"
+                android:background="@drawable/edit_platform"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:fontFamily="@font/righteous"
+                android:hint="@string/phone"
+                android:inputType="phone"
+                android:textSize="@dimen/input_textSize"
+                app:layout_constraintBottom_toTopOf="@+id/updateAdressId"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/updateEmailId" />
+
+            <EditText
+                android:id="@+id/updateAdressId"
+                android:text="@={contact.address}"
+                android:background="@drawable/edit_platform"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:fontFamily="@font/righteous"
+                android:hint="@string/address"
+                android:inputType="textMultiLine"
+                android:textSize="@dimen/input_textSize"
+                app:layout_constraintBottom_toTopOf="@+id/updateButtonId"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/updatePhoneId" />
+
+            <Button
+                android:id="@+id/updateButtonId"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/righteous"
+                android:text="@string/update_button1"
+                android:textSize="@dimen/input_textSize"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/updateAdressId" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</layout>
