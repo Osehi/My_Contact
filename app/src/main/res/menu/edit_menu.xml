@@ -9,4 +9,9 @@
         android:visible="true"
         />
 
+    <item android:id="@+id/delete"
+        android:enabled="true"
+        android:title="@string/delete"
+        android:visible="true"/>
+
 </menu>
