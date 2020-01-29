@@ -4,4 +4,5 @@
     <dimen name="central_message">24sp</dimen>
     <dimen name="input_textSize">20sp</dimen>
     <dimen name="edit_base">1dp</dimen>
+    <dimen name="input_text_padding_left">8dp</dimen>
 </resources>
